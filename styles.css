@@ -439,10 +439,63 @@ h2 {
     background: #bae6fd !important;
 }
 
+/* Mission Section */
+.mission {
+    margin-top: 3rem;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+    border-radius: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(244, 114, 182, 0.15);
+}
+
+.mission::before {
+    content: '❤️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20rem;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.mission-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mission h2 {
+    color: #be185d;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.mission p {
+    font-size: 1.15rem;
+    color: #831843;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.mission .thanks {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
 /* Footer */
 footer {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     color: var(--text-muted);
     font-size: 1.2rem;
     font-weight: 600;

@@ -18,6 +18,25 @@
             <span class="badge">Élmény & Felfedezés</span>
             <h1>Programterv</h1>
             <h2>Mátrai tábor programjavaslat</h2>
+            
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="number" id="days">00</span>
+                    <span class="label">Nap</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number" id="hours">00</span>
+                    <span class="label">Óra</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number" id="minutes">00</span>
+                    <span class="label">Perc</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number" id="seconds">00</span>
+                    <span class="label">Mp</span>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -193,6 +212,35 @@
         window.addEventListener("scroll", () => {
             handleScrollAnimation();
         });
+
+        // Countdown Timer Logic (June 2 of the current year, at 11:00 AM)
+        const currentYear = new Date().getFullYear();
+        let targetDate = new Date(`June 2, ${currentYear} 11:00:00`).getTime();
+        
+        // If the date has already passed this year, set it for next year
+        if (targetDate < new Date().getTime()) {
+            targetDate = new Date(`June 2, ${currentYear + 1} 11:00:00`).getTime();
+        }
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<div class='started-msg'>A tábor elkezdődött! 🎉</div>";
+            }
+        }, 1000);
     </script>
 </body>
 </html>

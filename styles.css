@@ -115,6 +115,15 @@ h2 {
     color: var(--text-muted);
 }
 
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Countdown Timer */
 .countdown {
     display: flex;
@@ -301,6 +310,17 @@ h2 {
     font-size: 0.95rem;
 }
 
+.details-list {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.details-list li {
+    margin-bottom: 0.2rem;
+}
+
 /* Day 2 & 3 Split */
 .split-day {
     display: grid;
@@ -340,6 +360,17 @@ h2 {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-main);
+}
+
+.part-details {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.part-details li {
+    margin-bottom: 0.2rem;
 }
 
 /* Day 4 Features */

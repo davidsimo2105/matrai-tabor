@@ -258,14 +258,14 @@ h2 {
     border-radius: 2px;
 }
 
-.schedule-list li {
+.schedule-list > li {
     display: flex;
     margin-bottom: 2rem;
     position: relative;
     z-index: 1;
 }
 
-.schedule-list li:last-child {
+.schedule-list > li:last-child {
     margin-bottom: 0;
 }
 
@@ -381,7 +381,7 @@ h2 {
     gap: 1.5rem;
 }
 
-.features-list li {
+.features-list > li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -393,7 +393,7 @@ h2 {
     transition: transform 0.3s, background 0.3s;
 }
 
-.features-list li:hover {
+.features-list > li:hover {
     transform: translateY(-5px);
     background: white;
 }
@@ -511,7 +511,7 @@ footer {
         left: 20px;
     }
 
-    .schedule-list li {
+    .schedule-list > li {
         flex-direction: column;
         align-items: flex-start;
     }

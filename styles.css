@@ -241,7 +241,7 @@ h2 {
 .schedule-list::before {
     content: '';
     position: absolute;
-    left: 45px;
+    left: 130px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -261,12 +261,12 @@ h2 {
 }
 
 .time {
-    width: 100px;
+    width: 130px;
     flex-shrink: 0;
     font-weight: 600;
     color: var(--primary-light);
     font-size: 1.1rem;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
     text-align: right;
     position: relative;
 }
@@ -274,7 +274,7 @@ h2 {
 .time::after {
     content: '';
     position: absolute;
-    right: -6px;
+    right: -9px;
     top: 6px;
     width: 12px;
     height: 12px;
@@ -434,12 +434,13 @@ footer {
 
     .time {
         text-align: left;
-        padding-left: 2rem;
+        padding-left: 2.5rem;
         margin-bottom: 0.5rem;
+        width: 100%;
     }
 
     .time::after {
-        left: -2px;
+        left: 11px;
         right: auto;
     }
 

@@ -267,7 +267,7 @@
             targetDate = new Date(`June 2, ${currentYear + 1} 11:00:00`).getTime();
         }
 
-        const x = setInterval(function() {
+        const updateCountdown = () => {
             const now = new Date().getTime();
             const distance = targetDate - now;
 
@@ -282,10 +282,16 @@
             document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
 
             if (distance < 0) {
-                clearInterval(x);
+                clearInterval(countdownInterval);
                 document.getElementById("countdown").innerHTML = "<div class='started-msg'>A tábor elkezdődött! 🎉</div>";
             }
-        }, 1000);
+        };
+
+        // Run once immediately to avoid 00:00:00:00 flash
+        updateCountdown();
+        
+        // Then update every second
+        const countdownInterval = setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
